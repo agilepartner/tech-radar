@@ -2,7 +2,7 @@
 layout: details
 filename: docker 
 name: Docker
-image: /assets/images/Docker.png
+image: /assets/images/docker.png
 category: Platforms
 ring: Adopt
 ---

@@ -1,6 +1,6 @@
 ---
 layout: details
-filename: TDD
+filename: tdd
 name: Test Driven Development
 image: /assets/images/TDD.png
 category: Techniques
