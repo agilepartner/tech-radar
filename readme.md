@@ -20,6 +20,24 @@ So, to add content to the radar :
 Once you have created a new file, you can push it.
 The related item will be presented on the radar.
 
+## Update the radar javascript
+The javascript source code of the radar is available here : https://github.com/agilepartner/tech-radar-js
+
+To integrate the built code you have to :
+* Add front matter at the top of the html file
+```
+    ---
+    title: Radar
+    layout: radar
+    ---
+```
+
+## Setup your dev environment
+```
+gem install bundler
+bundle install
+```
+
 ## Serve the radar with jekyll
 ```
 bundle exec jekyll serve
