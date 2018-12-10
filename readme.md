@@ -32,6 +32,12 @@ To integrate the built code you have to :
     ---
 ```
 
+## Setup your dev environment
+```
+gem install bundler
+bundle install
+```
+
 ## Serve the radar with jekyll
 ```
 bundle exec jekyll serve
