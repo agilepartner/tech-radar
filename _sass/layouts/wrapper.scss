@@ -1,0 +1,10 @@
+.page-wrapper {
+  margin: auto;
+  padding: 0 3rem;
+  max-width: $width-wrapper;
+  width: 100%;
+
+  &.full-width {
+    max-width: 100%;
+  }
+}

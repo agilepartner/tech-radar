@@ -1,0 +1,53 @@
+
+/********** GENERAL **********/
+$font-family:                     "Nunito", sans-serif;
+$icon-font-family:                "Font Awesome 5 Free", "Font Awesome 5 Brands", sans-serif;
+$path-images:                      "../images";
+
+$main-color:                      #c42821;
+$secondary-color:                 #e03249;
+
+$main-color-hover:                darken($main-color, 15%);
+
+$main-color-darkest:              darken($main-color, 45%);
+$main-color-darker:               darken($main-color, 30%);
+$main-color-dark:                 darken($main-color, 15%);
+$main-color-light:                lighten($main-color, 15%);
+$main-color-lighter:              lighten($main-color, 30%);
+$main-color-lightest:             lighten($main-color, 40%);
+
+$secondary-color-darkest:         darken($secondary-color, 45%);
+$secondary-color-darker:          darken($secondary-color, 30%);
+$secondary-color-dark:            darken($secondary-color, 15%);
+$secondary-color-light:           lighten($secondary-color, 15%);
+$secondary-color-lighter:         lighten($secondary-color, 30%);
+$secondary-color-lightest:        lighten($secondary-color, 45%);
+
+$width-wrapper:                   1170px;
+
+$gray-darkest:                    #312b2b;
+$gray-darker:                     #7e7e7e;
+$gray-dark:                       #8f8f8f;
+$gray:                            #727374;
+$gray-light:                      #b9b9b9;
+$gray-lighter:                    #d7d7d7;
+$gray-lightest:                   #eeeeee;
+
+$green:                           #84b627;
+$green-dark:                      #6d9c2e;
+$yellow:                          #fdcb0e;
+$yellow-dark:                     #f2b500;
+$pink:                            #e03249;
+$pink-dark:                       #cc294b;
+$blue:                            #28a2dc;
+$blue-dark:                       #2489bd;
+$red:                             red;
+
+$body-bg:                         #f7f7f7;
+$color-text:                      #9d9ea3;
+$font-size-main:                  62.5%;
+$font-size-main-rem:              1.6rem;
+$line-height:                     1.5;
+
+$width-wrapper:                   1170px;
+/********** GENERAL **********/

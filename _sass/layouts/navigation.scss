@@ -1,0 +1,67 @@
+.nav-breadcrumb {
+  li {
+    display: inline-block;
+    position: relative;
+    margin-right: 2.5rem;
+    font-size: 1.6rem;
+    &:after {
+      position: absolute;
+      right: -17px;
+      top: 50%;
+      @include translateY(-50%);
+      font-size: 1.2rem;
+      font-family: $icon-font-family;
+      font-weight: 900;
+      content: "\f054";
+    }
+
+    &:last-child
+    {
+      &:after {content: none;}
+      a {cursor: default;pointer-events: none;}
+    }
+    a {
+      color: $gray;
+      &:hover {text-decoration: underline;}
+    }
+  }
+}
+
+
+
+
+.nav-pagination {
+  li {
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    a {
+      padding: 0.8rem 1.6rem;
+      display: block;
+      border: 1px solid $gray-lightest;
+      border-radius: 5px;
+      background-color: #ffffff;
+      @include transition(0.2s);
+
+      i {font-size: 1.3rem;}
+
+      &:hover {
+        background-color: $main-color;
+        color: #ffffff;
+        @include transition(0.2s);
+      }
+    }
+  }
+
+  @media(max-width: 640px) {
+  }
+}
+
+nav.text-right {
+  .nav-pagination li {margin-left: 0.25rem!important;margin-right: 0;}
+}
+
+nav.text-center {
+  .nav-pagination li {margin: 0 0.5rem!important;}
+}

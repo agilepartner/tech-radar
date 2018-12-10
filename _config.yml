@@ -1,0 +1,22 @@
+name: Tech radar
+
+plugins:
+  - github-pages
+
+collections:
+  languages-frameworks:
+    output: true    
+  platforms:
+    output: true    
+  techniques:
+    output: true
+  tools:
+    output: true    
+
+sass:
+    sass_dir: _sass
+
+plugins:
+  - jekyll-target-blank
+
+exclude: ['node_modules']

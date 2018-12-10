@@ -1,0 +1,100 @@
+.c-main-color-darkest {color: $main-color-darkest;}
+.c-main-color-darker {color: $main-color-darker;}
+.c-main-color-dark {color: $main-color-dark;}
+.c-main-color {color: $main-color;}
+.c-main-color-light {color: $main-color-light;}
+.c-main-color-lighter {color: $main-color-lighter;}
+.c-main-color-lightest {color: $main-color-lightest;}
+
+.c-secondary-color-darkest {color: $secondary-color-darkest;}
+.c-secondary-color-darker {color: $secondary-color-darker;}
+.c-secondary-color-dark {color: $secondary-color-dark;}
+.c-main-color {color: $main-color;}
+.c-secondary-color-light {color: $secondary-color-light;}
+.c-secondary-color-lighter {color: $secondary-color-lighter;}
+.c-secondary-color-lightest {color: $secondary-color-lightest;}
+
+.c-gray-darkest {color: $gray-darkest;}
+.c-gray-darker {color: $gray-darker;}
+.c-gray-dark {color: $gray-dark;}
+.c-gray {color: $gray;}
+.c-gray-light {color: $gray-light;}
+.c-gray-lighter {color: $gray-lighter;}
+.c-gray-lightest {color: $gray-lightest;}
+
+.c-green {color: $green;}
+.c-blue {color: $blue;};
+.c-red {color: $red;}
+.c-yellow {color: $yellow;}
+.c-black {color: #000000;}
+.c-white {color: #ffffff;}
+
+.bg-main-color-darkest {background-color: $main-color-darkest;}
+.bg-main-color-darker {background-color: $main-color-darker;}
+.bg-main-color-dark {background-color: $main-color-dark;}
+.bg-main-color {background-color: $main-color;}
+.bg-main-color-light {background-color: $main-color-light;}
+.bg-main-color-lighter {background-color: $main-color-lighter;}
+.bg-main-color-lightest {background-color: $main-color-lightest;}
+
+.bg-secondary-color-darkest {background-color: $secondary-color-darkest;}
+.bg-secondary-color-darker {background-color: $secondary-color-darker;}
+.bg-secondary-color-dark {background-color: $secondary-color-dark;}
+.bg-secondary-color {background-color: $secondary-color;}
+.bg-secondary-color-light {background-color: $secondary-color-light;}
+.bg-secondary-color-lighter {background-color: $secondary-color-lighter;}
+.bg-secondary-color-lightest {background-color: $secondary-color-lightest;}
+
+.bg-gray-darkest {background-color: $gray-darkest;}
+.bg-gray-darker {background-color: $gray-darker;}
+.bg-gray-dark {background-color: $gray-dark;}
+.bg-gray {background-color: $gray;}
+.bg-gray-light {background-color: $gray-light;}
+.bg-gray-lighter {background-color: $gray-lighter;}
+.bg-gray-lightest {background-color: $gray-lightest;}
+
+.bg-green {background-color: $green;}
+.bg-blue {background-color: $blue;}
+.bg-red {background-color: $red;}
+.bg-yellow {background-color: $yellow;}
+.bg-white {background-color: #ffffff;}
+.bg-black {background-color: #000000;}
+
+.bg-gradient-main-color {
+	background: $main-color;
+	background: -moz-linear-gradient(left, $main-color 0%, $secondary-color 100%);
+	background: -webkit-linear-gradient(left, $main-color 0%,$secondary-color 100%);
+	background: linear-gradient(to right, $main-color 0%,$secondary-color 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$secondary-color', endColorstr='$main-color',GradientType=1 );
+}
+
+.bg-gradient-yellow {
+	background: $yellow;
+	background: -moz-linear-gradient(left, $yellow 0%, $yellow-dark 100%);
+	background: -webkit-linear-gradient(left, $yellow 0%,$yellow-dark 100%);
+	background: linear-gradient(to right, $yellow 0%,$yellow-dark 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$yellow-dark', endColorstr='$yellow',GradientType=1 );
+}
+
+.bg-gradient-blue {
+	background: $blue;
+	background: -moz-linear-gradient(left, $blue 0%, $blue-dark 100%);
+	background: -webkit-linear-gradient(left, $blue 0%,$blue-dark 100%);
+	background: linear-gradient(to right, $blue 0%,$blue-dark 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blue-dark', endColorstr='$blue',GradientType=1 );
+}
+
+.bg-gradient-green {
+	background: $green;
+	background: -moz-linear-gradient(left, $green 0%, $green-dark 100%);
+	background: -webkit-linear-gradient(left, $green 0%,$green-dark 100%);
+	background: linear-gradient(to right, $green 0%,$green-dark 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$green-dark', endColorstr='$green',GradientType=1 );
+}
+
+
+.color-example {
+	padding: 10px;
+	color: #ffffff;
+	margin-bottom: 1.5rem;
+}

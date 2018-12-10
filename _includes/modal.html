@@ -1,0 +1,19 @@
+<div class="box-modal" data-modal="modal-{{ include.filename }}" role="document">
+    <div class="box-modal-header">
+        <h4>{{ include.name }}</h4>
+        <button type="button" class="triggerCloseModal"><i class="fa fa-times"></i></button>
+    </div>
+
+    <div class="box-modal-content">
+            <main class="page-single-card">
+                    <div class="grid-flex">
+                        <div class="column w-25">
+                            <img src="{{ include.image }}" />
+                        </div>
+                        <div class="column">
+                            {{ include.content }}
+                        </div>
+                        </div>
+                </main>
+    </div>
+</div>

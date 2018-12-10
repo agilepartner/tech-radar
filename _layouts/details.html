@@ -1,0 +1,27 @@
+{% include head.html %}
+{% include header.html %}
+
+<main class="page-single-card">
+  <div class="page-wrapper">
+
+    <div class="grid-flex v-align-middle grid-title">
+      <div class="column">
+        <h1 class="m-0">{{page.title}}</h1>
+      </div>
+      <div class="column text-right">
+        <a href="{{ site.baseurl }}/{{page.category | downcase}}/" class="btn bg-gradient-main-color fa-arrow-left left link-homepage">Back to {{page.category}}</a>
+      </div>
+    </div>
+
+    <div class="grid-flex">
+      <div class="column w-25">
+        <img src="{{page.image}}" />
+      </div>
+      <div class="column">
+        {{content}}
+      </div>
+    </div>
+  </div>
+</main>
+
+{% include footer.html %}

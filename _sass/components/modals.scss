@@ -1,0 +1,136 @@
+html.modal-open {
+	overflow: hidden;
+	.page-modals {overflow: hidden;}
+}
+
+.page-modals {
+	@include position(fixed, 0,0,0,0);
+	visibility: hidden;
+	z-index: 11;
+	overflow-x: hidden;
+	overflow-y: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@include opacity(0);
+	@include transition(0.3s);
+
+	&.show {
+		@include opacity(1);
+		visibility: visible;
+		@include transition(0.3s);
+	}
+
+
+
+
+	#pageModalsOverlayer {
+		@include position(fixed, 0,0,0,0);
+		background-color: rgba(0,0,0,0.7);
+		@include opacity(1);
+		cursor: pointer;
+		z-index: -1;
+	}
+
+
+	.box-modal {
+		background-color: #ffffff;
+		position: relative;
+		width: 90%;
+		max-width: 900px;
+		margin: auto;
+		padding: 3rem;
+		@include opacity(0);
+		visibility: hidden;
+		display: none;
+
+
+		h1, h2, h3, h4, h5, h6 {margin-top: 0;}
+
+		&.show {
+			@include opacity(1);
+			visibility: visible;
+			display: block;
+		}
+
+		button {
+			position: absolute;
+			z-index: 1;
+			top: 1px;
+			right: 1px;
+			background-color: transparent;
+			color: $gray-darkest;
+			padding: 2.5rem 3rem;
+			font-size: 2rem;
+			span {display: none;}
+			&:focus {outline: 1px solid $main-color;}
+		}
+
+		.box-modal__header {
+			border-bottom: 1px solid $gray-lightest;
+			margin-bottom: 3rem;
+			padding-bottom: 1rem;
+		}
+
+		.box-modal__footer {
+			border-top: 1px solid $gray-lightest;
+			padding-top: 3rem;
+		}
+
+		@media(max-width: 767px) {
+			width: 100%;
+			height: 100%;
+			padding: 1.5rem;
+			padding-top: 3;
+			overflow-y: scroll;
+			padding-bottom: 6rem;
+
+			button {
+				position: fixed;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: $main-color;
+				color: #ffffff;
+				top: auto;
+				width: 100%;
+				padding: 1.5rem 3rem;
+
+				span {
+					display: inline-block;
+					font-size: 1.6rem;
+				}
+			}
+
+			.box-modal__footer {
+				padding-bottom: 3rem;
+			}
+		}
+	}
+}
+
+.close-overlayer {
+	@include position(fixed, 0,0,0,0);
+	cursor: pointer;
+
+	i {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		color: #ffffff;
+		font-size: 2.4rem;
+
+	}
+
+
+	@media(max-width: 767px) {
+		position: absolute;
+		bottom: auto;
+		left: auto;
+		z-index: 10;
+
+		i {
+			color: #000000;
+		}
+	}
+}

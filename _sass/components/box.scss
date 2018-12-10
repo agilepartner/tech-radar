@@ -1,0 +1,333 @@
+.box-message {
+	padding: 20px;
+	margin-bottom: 30px;
+	border: 1px solid transparent;
+	position: relative;
+
+	a {text-decoration: underline;}
+	h1, h2, h3, h4, h5, h6 {margin-top: 0;font-weight: 600;}
+
+	&:last-child {margin-bottom: 0;}
+	& > *:last-child {margin-bottom: 0;}
+
+	&.bg-main-color {
+		background-color: $main-color;
+		color: #ffffff;
+		a, h1, h2, h3, h4, h5, h6 {color: #ffffff;}
+	}
+
+	&.bg-green {
+		background-color: #dff0d8;
+		color: #3c763d;
+		a, h1, h2, h3, h4, h5, h6 {color: #3c763d;}
+	}
+
+	&.bg-yellow {
+		background-color: #fcf8e3;
+		color: #8a6d3b;
+		a, h1, h2, h3, h4, h5, h6 {color: #8a6d3b;}
+	}
+
+	&.bg-red {
+		background-color: #f2dede;
+		color: #a94442;
+		a, h1, h2, h3, h4, h5, h6 {color: #a94442;}
+	}
+
+	&.bg-blue {
+		background-color: #d9edf7;
+		color: #31708f;
+		a, h1, h2, h3, h4, h5, h6 {color: #31708f;}
+	}
+
+	&.inverse {
+		background-color: #ffffff;
+		&.bg-main-color {border-color: $main-color;}
+		&.bg-green {border-color: #3c763d;}
+		&.bg-yellow {border-color: #8a6d3b;}
+		&.bg-red {border-color: #a94442;}
+		&.bg-blue {border-color: #31708f;}
+	}
+
+	&.style-2 {
+		background-color: #ffffff;
+		border-color: $gray-lighter;
+		color: $color-text;
+		&.bg-main-color {
+			border-left: 5px solid $main-color;
+			&:before {color: $main-color;}
+		}
+		&.bg-green {
+			border-left: 5px solid #3c763d;
+			&:before {color: #3c763d;}
+		}
+		&.bg-yellow {
+			border-left: 5px solid #8a6d3b;
+			&:before {color: #8a6d3b;}
+		}
+		&.bg-red {
+			border-left: 5px solid #a94442;
+			&:before {color: #a94442;}
+		}
+		&.bg-blue {
+			border-left: 5px solid #31708f;
+			&:before {color: #31708f;}
+		}
+
+	}
+
+	&[class*=fa] {
+		padding-left: 75px;
+	}
+
+	&:before {
+	    position: absolute;
+	    left: 20px;
+	    top: 50%;
+	    @include translateY(-50%);
+	    font-family: $icon-font-family;
+			font-weight: 900;
+	    font-size: 3rem;
+	}
+
+	@media(max-width: 640px) {
+		&[class*=fa] {
+			padding-left: 20px;
+		}
+
+		&:before {content: none;}
+	}
+
+
+}
+
+
+.box-1 {
+	@include flex-container();
+	@include flex-direction-column();
+	background-color: #ffffff;
+	box-shadow: 0px 1px 5px -2px rgba(0,0,0,.3);
+
+	h1, h2, h3, h4, h5, h6 {margin-top: 0;margin-bottom: 1rem;}
+
+	.box-1__visual {
+		position: relative;
+
+		.hover {
+			@include position(absolute, 0,0,0,0);
+			@include flex-container();
+			align-items: center;
+			justify-content: center;
+			background-color: rgba(0,0,0,0.1);
+			color: #ffffff;
+			@include scale(0.9);
+			@include transition(0.3s);
+			@include opacity(0);
+		}
+	}
+
+	.box-1__content {
+		padding: 2rem;
+		background-color: #ffffff;
+
+		.infos {
+			span {
+				display: inline-block;
+				margin-right: 1rem;
+				color: $gray-light;
+				margin-bottom: 1rem;
+				&:last-child {margin-right: 0;}
+			}
+		}
+
+		h5 {
+			@include transition(0.3s);
+			color: $gray-darkest;
+			& + p {margin-top: 0;}
+		}
+
+		p {color: $color-text;}
+	}
+
+	&:hover, &:focus  {
+		h5 {color: $main-color;@include transition(0.3s);}
+
+    .link-follow {
+			text-decoration: underline;
+	    &:before {
+	      right: -0.5rem;@include transition(0.3s);
+	    }
+		}
+
+		.box-1-visual {
+			.hover {
+				@include scale(1);
+				@include transition(0.3s);
+				@include opacity(1);
+				background-color: rgba(0,0,0,0.5);
+			}
+		}
+  }
+
+	&.h-align-left {justify-content: flex-start;}
+	&.h-align-middle {justify-content: center;}
+	&.h-align-right {justify-content: flex-end;}
+
+	&.v-align-top {align-items: flex-start;}
+	&.v-align-middle {align-items: center;}
+	&.v-align-bottom {align-items: flex-end;}
+
+	&.horizontal {
+		@include flex-direction-row();
+
+		.box-1__visual {
+			max-width: 33.3333%;
+			flex: 0 0 33.3333%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			justify-content: center;
+			align-items: center;
+			@include flex-container();
+		}
+
+		.box-1__content {
+
+		}
+
+		@for $i from 1 through 100 {
+	    @if ($i == 33) {
+	      &.w-#{$i} {
+					.box-1__visual {
+						max-width: 33.3333%;
+						flex: 0 0 33.3333%;
+					}
+				}
+	    }
+
+	    @elseif ($i == 66) {
+	      &.w-#{$i} {
+					.box-1__visual {
+						max-width: 66.6667%;
+						flex: 0 0 66.6667%;
+					}
+				}
+	    }
+
+	    @else {
+	      &.w-#{$i} {
+					.box-1__visual {
+							max-width: percentage($i / 100);
+							flex: 0 0 percentage($i / 100);
+					}
+				}
+	    }
+	  }
+
+		&.w-25 {
+			.box-1__visual {
+				max-width: 25%;
+				flex: 0 0 25%;
+			}
+
+			.box-1__content {
+				max-width: 75%;
+				flex: 0 0 75%;
+			}
+		}
+
+		&.w-50 {
+			.box-1__visual {
+				max-width: 50%;
+				flex: 0 0 50%;
+			}
+
+			.box-1__content {
+				max-width: 50%;
+				flex: 0 0 50%;
+			}
+		}
+
+		&.w-75 {
+			.box-1__visual {
+				max-width: 75%;
+				flex: 0 0 75%;
+			}
+
+			.box-1__content {
+				max-width: 25%;
+				flex: 0 0 25%;
+			}
+		}
+
+
+	}
+
+	@media(max-width: 1023px) {
+		.box-1__content {
+			h5 {font-size: 2rem;}
+		}
+	}
+
+	@media(max-width: 767px) {
+		.box-1__content {
+			h5 {font-size: 1.8rem;}
+		}
+	}
+}
+
+
+.box-collapse {
+	border: 1px solid $gray-lighter;
+	border-bottom: 0;
+	&:last-child {border-bottom: 1px solid $gray-lighter;}
+
+	& + .box-collapse {border-top: 1px solid $gray-lighter;}
+
+	.box-collapse__trigger {
+		h1, h2, h3, h4, h5, h6 {margin: 0;}
+
+		&.has-picto {
+			button {
+				&:after {
+					position: absolute;
+					right: 0;
+					top: 0;
+					content: "\f067";
+					font-family: $icon-font-family;
+					font-weight: 900;
+					padding: 2rem 3rem;
+				}
+
+				&[aria-expanded="true"] {
+					background-color: $gray-lighter;@include transition(0.2s);
+					&:after {content: "\f068";}
+				}
+			}
+		}
+
+		button {
+			position: relative;
+			display: block;
+			width: 100%;
+			text-align: left;
+			background-color: $gray-lightest;
+			color: $gray-darker;
+			font-weight: 600;
+			padding: 2rem 3rem;
+			letter-spacing: 0.5px;
+			@include transition(0.2s);
+
+			&:hover, &:focus {background-color: $gray-lighter;@include transition(0.2s);}
+		}
+	}
+
+	.box-collapse__content {
+		padding: 3rem;
+		display: none;
+
+		&.is-expanded {
+			display: block;
+		}
+	}
+}

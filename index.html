@@ -1,0 +1,73 @@
+---
+title: Home
+layout: default
+---
+
+<main class="page-homepage">
+
+	<section class="section-intro">
+		<div class="page-wrapper">
+			<div class="grid-flex">
+				<div class="column w-40">
+					<h2>Tech radar</h2>
+					<p>
+						The Radar is a document that sets out the changes that are currently interesting regarding software development in our company. <br />
+						It is a knowledge base about where we are today as a company and where we want to go.
+					</p>
+				</div>
+
+				<div class="column o-20 w-40">
+					<div class="has-background">
+						<h2>Aim of the tech radar</h2>
+						<p>
+							It centralizes things in motion that we should pay attention to and consider using in our projects. <br />
+							The original concept comes from thoughtworks, you can read more about it <a href="https://www.thoughtworks.com/radar/faq">here</a>.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-go-to-radar">
+		<div class="page-wrapper">
+			<div class="grid-flex">
+				<div class="column"><a href="{{ site.baseurl }}/radar/" class="btn bg-gradient-main-color">Go to the radar</a></div>
+			</div>
+		</div>
+	</section>	
+
+	<section class="section-categories">
+		<div class="page-wrapper">
+			<h2 class="text-center">4 categories</h2>
+			<div class="grid-flex">
+				<div class="column"><a href="{{ site.baseurl }}/techniques/" class="btn bg-gradient-green">Techniques</a></div>
+				<div class="column"><a href="{{ site.baseurl }}/tools/" class="btn  bg-gradient-blue">Tools</a></div>
+				<div class="column"><a href="{{ site.baseurl }}/languages-frameworks/" class="btn bg-gradient-yellow">Languages & frameworks</a></div>
+				<div class="column"><a href="{{ site.baseurl }}/platforms/" class="btn bg-gradient-main-color">Platforms</a></div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-categories">
+
+	<div class="page-wrapper">
+		<h2 class="text-center">4 rings</h2>
+		<h2 id="adopt"><a href="#adopt">Adopt</a></h2>
+		<p>We have capacity to use these solutions, they have already been deployed in production.<br>
+		First choices to start a new project.</p>
+	
+		<h2 id="can-use"><a href="#can-use">Can Use</a></h2>
+		<p>Pertinence of those solutions have been demonstrated.
+		You can use it on your project but you need to provide a reason to not use the default choice.</p>
+	
+		<h2 id="assess"><a href="#assess">Assess</a></h2>
+		<p>These solutions may bring values. 
+		It is necessary to assess and test them in our environment to confirm or not this vision.</p>
+	
+		<h2 id="deprecatedrejected"><a href="#deprecated">Deprecated/Rejected</a></h2>
+		<p>For various reasons, these solutions are no longer the first choices or are not recommended (anymore).</p>
+		
+	</div>
+	</section>
+</main>

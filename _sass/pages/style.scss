@@ -1,0 +1,12 @@
+* {
+  @include box-sizing();
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+
+.shadow-img {
+  box-shadow: 0 0 11px 0px rgba(0, 0, 0, 0.2);
+}

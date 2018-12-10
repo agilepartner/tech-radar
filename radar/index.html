@@ -1,0 +1,32 @@
+---
+title: Radar
+layout: radar
+---
+
+<head><link href="main.88c898e4ce690b4fc8b0.css" rel="stylesheet"></head><body>
+
+  <main class="page-single-card">
+    <radar></radar>
+  </main>
+
+    <div class="page-modals" id="pageModals" tabindex="-1" role="dialog" aria-hidden="true">
+      <div id="pageModalsOverlayer"></div>
+
+      {% for item in site.techniques %}
+        {% include modal.html name=item.name content=item.content filename=item.filename image=item.image %}
+      {% endfor %}
+
+      {% for item in site.languages-frameworks %}
+        {% include modal.html name=item.name content=item.content filename=item.filename image=item.image %}
+      {% endfor %}
+
+      {% for item in site.tools %}
+        {% include modal.html name=item.name content=item.content filename=item.filename image=item.image %}
+      {% endfor %}
+
+      {% for item in site.platforms %}
+        {% include modal.html name=item.name content=item.content filename=item.filename image=item.image %}
+      {% endfor %}
+    </div>
+
+  <script type="text/javascript" src="main.88c898e4ce690b4fc8b0.js"></script></body>

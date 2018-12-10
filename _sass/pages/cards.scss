@@ -1,0 +1,107 @@
+
+.page-cards {
+  background-image: url('../images/wave-4.jpg');
+  background-repeat: no-repeat;
+  margin-top: 10rem;
+
+  @media(max-width: 767px) {
+    margin-top: 5rem;
+    padding-bottom: 10rem;
+
+    .box-modal {
+      .box-modal__content {
+        .grid-flex {
+          .column:first-child {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.grid-cards {
+  text-align: center;
+  .column {
+    @include opacity(0);
+    @include animation(flipCards 0.2s forwards);
+
+    img {
+      @include scale(1);
+      @include transition(0.2s);
+    }
+
+    &:hover {
+      img {
+        @include scale(1.1);
+        @include transition(0.2s);
+      }
+    }
+  }
+
+  @for $i from 1 through 100 {
+    .column:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.1}s;
+    }
+  }
+
+  @media(max-width: 1024px) {
+    .column {
+      max-width: 20%;
+      flex: 0 0 20%;
+    }
+  }
+
+  @media(max-width: 767px) {
+    .column {
+      max-width: 25%;
+      flex: 0 0 25%;
+    }
+  }
+
+  @media(max-width: 640px) {
+    .column {
+      max-width: 33.3333%;
+      flex: 0 0 33.3333%;
+    }
+  }
+
+  @media(max-width: 414px) {
+    .column {
+      max-width: 50%;
+      flex: 0 0 50%;
+    }
+  }
+}
+
+
+@include keyframes(flipCards) {
+  0% {
+    @include transform(scaleX(-0.5) translateY(-20px));
+  }
+  100% {
+    @include transform(scaleX(1) translateY(0px));
+    @include opacity(1);
+
+  }
+}
+
+
+.grid-title {
+  @media(max-width: 767px) {
+
+    margin-top: 3rem;
+
+    .column {
+      flex: 0 0 100%;
+      max-width: 100%;
+      text-align: center;
+
+      &:last-child {
+        padding: 0;
+      }
+    }
+  }
+}

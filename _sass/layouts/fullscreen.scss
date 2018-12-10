@@ -1,0 +1,36 @@
+.page-fullscreen {
+  @include flex-container();
+  @include flex-direction-column();
+  align-items: center;
+
+  height: 100vh;
+  background: #3cdcdc;
+  background: -moz-radial-gradient(center, ellipse cover, #3cdcdc 50%, #3c93dc 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #3cdcdc 50%,#3c93dc 100%);
+  background: radial-gradient(ellipse at center, #3cdcdc 50%,#3c93dc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3cdcdc', endColorstr='#3c93dc',GradientType=1 );
+
+  h1, p {color: #ffffff;letter-spacing: 1px;}
+  h1 {text-transform: uppercase;font-weight: 900;}
+
+  .link-social {
+    color: #ffffff;
+    display: inline-block;
+    margin: 0 1rem;
+    @include opacity(0.8);@include transition(0.2s);
+    &:hover {@include opacity(1);@include transition(0.2s);}
+  }
+
+  span {
+    @include position(absolute, auto, 0,2rem,0);
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+
+  @media(max-width: 767px) {
+    h1 {font-size: 3.6rem;}
+    p {font-size: 1.8rem;}
+  }
+}

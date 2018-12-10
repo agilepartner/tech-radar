@@ -1,0 +1,469 @@
+input, select, textarea {
+  width: 100%;
+  padding: 2rem;
+  background-color: $gray-lightest;
+  border: 0;
+  font-size: 1.6rem;
+
+  &:focus {
+    outline: 1px solid $main-color!important;
+  }
+}
+
+input[type=submit], button {
+  border: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+input, select, textarea, button {
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+  height: 70px;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+
+  & + a {
+    font-size: 1.8rem;
+    text-decoration: underline;
+  }
+}
+
+
+
+/********** CHROME AUTOFILL **********/
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  background-image: none !important;
+  color: #989898 !important;
+  box-shadow: inset 0 0px 39px 46px $gray-lightest!important;
+}
+/********** CHROME AUTOFILL **********/
+
+
+/********** FIREFOX ERROR INPUT **********/
+:not(output):-moz-ui-invalid {box-shadow: none!important;}
+:not(output):-moz-ui-invalid:-moz-focusring {box-shadow: none!important;}
+output:-moz-ui-invalid {color: $red;}
+/********** FIREFOX ERROR INPUT **********/
+
+
+/********** PLACEHOLDERS **********/
+::-webkit-input-placeholder {color: $gray;}
+::-moz-placeholder {color: $gray;}
+:-ms-input-placeholder {color: $gray;}
+:-moz-placeholder {color: $gray;}
+/********** PLACEHOLDERS **********/
+
+
+
+
+
+.input {
+  .icon {
+    position: relative;
+    input {padding-left: 6rem;}
+    &:before {
+      position: absolute;
+      font-family: $icon-font-family;
+      font-weight: 900;
+      top: 18px;
+      left: 2rem;
+      font-size: 2rem;
+      color: $main-color;
+    }
+  }
+
+  &.is-disabled {
+    .icon {
+      cursor: not-allowed;
+      &:before {color: $gray;}
+    }
+
+    label {cursor: not-allowed;}
+
+    input:focus {outline: 0;}
+
+    input {
+      background-color: $gray-lighter;
+      cursor: not-allowed;
+    }
+  }
+
+  input:disabled {
+    background-color: $gray-lighter;
+    cursor: not-allowed;
+  }
+}
+
+.input-search {
+  position: relative;
+  overflow: hidden; //IE hack
+  input {
+    padding-right: 1rem;
+  }
+
+  button {
+    position: absolute;
+    right: 0;
+    top: 1px;
+    padding: 1.8rem 2.3rem;
+  }
+}
+
+.input-animation {
+  position: relative;
+
+
+  input:-webkit-autofill, textarea:-webkit-autofill, :-webkit-autofill {
+    background-image: none !important;
+    color: #989898 !important;
+    box-shadow: inset 0 0px 39px 46px #ffffff!important;
+  }
+
+  label {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 2;
+    @include transition(0.3s);
+    cursor: text;
+  }
+
+  input, textarea {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid $gray-lightest;
+    position: relative;
+    z-index: 1;
+    height: inherit;
+    min-height: inherit;
+    &:focus {
+      outline: 0!important;
+    }
+  }
+
+  &:after {
+    width: 0;
+    height: 2px;
+    background-color: $main-color;
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    @include transition(0.3s);
+  }
+
+  &.active {
+    label {
+      top: -1rem;
+      left: 0;
+      color: $main-color;
+      font-size: 1.4rem;
+      @include transition(0.3s);
+    }
+
+    &:after {
+      width: 100%;
+      @include transition(0.3s);
+    }
+  }
+
+  &.textarea {
+    &:after {bottom: 7px;}
+  }
+}
+
+.input-checkbox, .input-radio {
+  position: relative;
+  cursor: pointer;
+
+  label {padding-left: 2rem;}
+
+  input {
+    position: absolute;
+    left: 0;
+    top: 0.7rem;
+    width: auto;
+  }
+
+  &.is-disabled {
+    label {color: $gray-light;cursor: not-allowed;}
+    input {cursor: not-allowed;}
+  }
+}
+
+.input-switch {
+
+
+  display: inline-block;
+  cursor: pointer;
+
+  input {
+    @include opacity(0);
+    position: absolute;
+    width: auto;
+  }
+
+  label {
+    display: inline-block;
+    margin-bottom: 0;
+    position: relative;
+    padding: 1rem 0;
+    cursor: pointer;
+    @include flex-container();
+
+    span {
+      padding-left: 9rem;
+      padding-top: 0.5rem;
+      display: inline-block;
+    }
+
+    &:before, &:after {
+      position: absolute;
+      content: "";
+      border-radius: 100px;
+    }
+
+    &:before {
+      width: 70px;
+      height: 35px;
+      background-color: $gray-lighter;
+      @include transition(0.3s);
+    }
+
+    &:after {
+      width: 25px;
+      height: 25px;
+      left: 5px;
+      top: 15px;
+      background-color: #ffffff;
+      @include transition(0.3s);
+    }
+  }
+
+
+
+  input:focus + label {
+    outline: 2px solid $main-color;
+  }
+
+  input:disabled + label {
+    cursor: not-allowed;
+    &:before {
+      background-color: $gray-lighter;
+    }
+    &:after {
+      left: 5px;
+    }
+  }
+
+
+  input:checked + label {
+    &:before {
+      background-color: $main-color;
+      @include transition(0.3s);
+    }
+    &:after {
+      left: 40px;
+      @include transition(0.3s);
+    }
+  }
+
+  @media(max-width: 767px) {
+    label {
+      &:before {
+        width: 65px;
+        height: 30px;
+      }
+
+      &:after {
+        width: 20px;
+        height: 20px;
+      }
+
+
+      span {
+        padding-left: 8rem;
+        padding-top: 0.2rem;
+      }
+    }
+
+    input:checked + label:after {
+      left: 40px;
+    }
+  }
+}
+
+.group-inputs {
+  &.horizontal {
+    .input-checkbox, .input-radio {
+      display: inline-block;
+      margin-right: 3rem;
+      &:last-child {margin-right: 0;}
+    }
+  }
+
+  &.vertical {
+    label {display: block;}
+  }
+}
+
+
+
+.custom-select {
+  position: relative;
+  background-color: $gray-lightest;
+
+  select {
+    position: relative;
+    z-index: 1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    background-color: transparent;
+
+  }
+
+  select::-ms-expand {display: none;}
+
+
+
+  &:after {
+    content: "\f078";
+    font-family: $icon-font-family;
+    font-weight: 900;
+    position: absolute;
+    z-index: 0;
+    right: 2px;
+    top: 4px;
+    padding: 1.5rem 2.6rem 1.5rem;
+    font-size: 1.8rem;
+    background-color: $gray-lightest;
+  }
+}
+
+.custom-input-checkbox  {
+  input[type="checkbox"] {@include opacity(0);}
+
+  label {
+    position: relative;
+    display: inline-block;
+    padding-left: 22px;
+    &:before, &:after {
+      position: absolute;
+      content: "";
+      display: inline-block;
+    }
+
+    &:before{
+      height: 13px;
+      width: 13px;
+      border: 2px solid $main-color;
+      left: 0px;
+      top: 3px;
+    }
+
+    &:after {
+      font-family: $icon-font-family;
+      font-weight: 900;
+      left: 3px;
+      top: 16%;
+      font-size: 1.1rem;
+      color: $main-color;
+      content: "\f00c";
+      @include scale(0);
+      @include transition(0.2s);
+    }
+  }
+
+  input[type="checkbox"] + label::after {@include scale(0);@include transition(0.2s);}
+  input[type="checkbox"]:checked + label::after {@include scale(1);@include transition(0.2s);}
+  input[type="checkbox"]:focus + label::before {outline: 2px auto $main-color-light;}
+
+
+  &.is-disabled {
+    label {
+      color: $gray-light;
+
+      &:before {
+        border-color: $gray-lighter
+      }
+
+      &:after {
+        color: $gray-lighter;
+      }
+    }
+  }
+}
+
+.custom-input-radio  {
+  input[type="radio"] {@include opacity(0);}
+
+  label {
+    position: relative;
+    display: inline-block;
+    padding-left: 22px;
+    &:before, &:after {
+      position: absolute;
+      content: "";
+      display: inline-block;
+    }
+
+    &:before{
+      height: 13px;
+      width: 13px;
+      border: 2px solid $main-color;
+      border-radius: 100px;
+      left: 0px;
+      top: 3px;
+    }
+
+    &:after {
+      left: 5px;
+      top: 8px;
+      width: 7px;
+      height: 7px;
+      background-color: $main-color;
+      border-radius: 100px;
+      @include scale(0);
+      @include transition(0.2s);
+    }
+  }
+
+  input[type="radio"] + label::after {@include scale(0);@include transition(0.2s);}
+  input[type="radio"]:checked + label::after {@include scale(1);@include transition(0.2s);}
+  input[type="radio"]:focus + label::before {outline: 2px auto $main-color-light;}
+
+  &.is-disabled {
+    label {
+      color: $gray-light;
+
+      &:before {
+        border-color: $gray-lighter
+      }
+
+      &:after {
+        color: $gray-lighter;
+      }
+    }
+  }
+}

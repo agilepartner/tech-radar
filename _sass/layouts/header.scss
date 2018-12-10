@@ -1,0 +1,43 @@
+.page-header {
+  padding: 2rem 0;
+  
+
+  .page-wrapper {
+    @include flex-container();
+    @include flex-v-align-center();
+    max-width: 100%;
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      margin: 0;
+      flex: 1;
+      a {color: $color-text;}
+    }
+  }
+
+  @media(max-width: 767px) {
+    margin-bottom: 0rem;
+
+    .page-wrapper {
+      @include flex-direction-column();
+      .logo {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+      }
+
+      .list-social {
+        flex: 0 0 100%;
+        max-width: 100%;
+
+        > li {
+          margin: 0 1.5rem;
+          a {font-size: 2rem;}
+        }
+      }
+    }
+  }
+}

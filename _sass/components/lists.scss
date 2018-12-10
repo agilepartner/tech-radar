@@ -1,0 +1,13 @@
+.list-social {
+  li {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 2rem;
+    &:last-child {margin-right: 0;}
+
+    .link-facebook {color: #4464B4;}
+    .link-twitter {color: #1C9CF4;}
+    .link-linkedin {color: #0473B3;}
+    .link-mail {color: $main-color;}
+  }
+}

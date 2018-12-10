@@ -1,0 +1,83 @@
+{% include head.html %}
+{% include header.html %}
+
+{% assign adopt = site.tools | where:'ring', 'Adopt' %}
+{% assign can-use = site.tools | where:'ring', 'Can Use' %}
+{% assign assess = site.tools | where:'ring', 'Assess' %}
+{% assign deprecated = site.tools | where:'ring', 'Deprecated' %}
+
+<main>
+  <div class="page-wrapper">
+
+    <div class="grid-flex v-align-middle grid-title">
+      <div class="column">
+        <h1 class="m-0">{{page.title}}</h1>
+      </div>
+      <div class="column text-right">
+        <a href="{{ site.baseurl }}" class="btn bg-gradient-main-color fa-arrow-left left link-homepage">Back to homepage</a>
+      </div>
+    </div>
+
+    <div class="box-message bg-blue" role="alert">
+      <p>{{page.description}}</p>
+    </div>
+
+    <div class="grid-flex v-align-middle">
+      <div class="column">
+      <h2 class="m-0">Adopt</h2>
+      </div>
+    </div>
+
+    <div class="grid-flex grid-cards">
+      {% for tool in adopt %}
+      <div class="column w-16">
+        <a href="{{tool.filename}}.html">{{ tool.name }}</a>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="grid-flex v-align-middle">
+      <div class="column">
+      <h2 class="m-0">Can Use</h2>
+      </div>
+    </div>
+
+    <div class="grid-flex grid-cards">
+      {% for tool in can-use %}
+      <div class="column w-16">
+        <a href="{{tool.filename}}.html">{{ tool.name }}</a>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="grid-flex v-align-middle">
+      <div class="column">
+      <h2 class="m-0">Assess</h2>
+      </div>
+    </div>
+  
+    <div class="grid-flex grid-cards">
+      {% for tool in assess %}
+      <div class="column w-16">
+        <a href="{{tool.filename}}.html">{{ tool.name }}</a>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="grid-flex v-align-middle">
+        <div class="column">
+        <h2 class="m-0">[Deprecated]</h2>
+        </div>
+      </div>
+  
+      <div class="grid-flex grid-cards">
+        {% for tool in deprecated %}
+        <div class="column w-16">
+          <a href="{{tool.filename}}.html">{{ tool.name }}</a>
+        </div>
+        {% endfor %}
+      </div>
+  </div>
+</main>
+
+{% include footer.html %}

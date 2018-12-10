@@ -1,0 +1,58 @@
+.page-single-card {
+  background-image: url('../images/wave-6.jpg');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  position: relative;
+  min-height: calc(100vh - 17rem);
+  z-index: 1;
+
+  &:before {
+    @include position(absolute, 0,0,0,0);
+    content: "";
+    background-image: url('../images/wave-7.jpg');
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-size: 20%;
+    background-position: right bottom;
+  }
+
+
+  ul {
+    margin-bottom: 3rem;
+     li {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+
+      &:before {
+        @include position(absolute, 0, auto, auto, 0);
+        content: "\f105";
+        font-family: $icon-font-family;
+        font-weight: 900;
+        color: $main-color;
+      }
+
+      a:hover {text-decoration: underline;}
+
+      ul {margin-top: 1rem;margin-bottom: 0;}
+    }
+  }
+
+  @media(max-width: 767px) {
+
+    background-size: 100%;
+    &:before {content: none;}
+
+    .grid-flex {
+      .column {
+        max-width: 100%;
+        flex: 0 0 100%;
+
+        &:first-child {text-align: center;}
+      }
+    }
+
+    margin-top: 5rem;
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,20 @@
+---
+---
+name,ring,quadrant,isNew,description,
+{% assign tech-adopt = site.techniques | where:'ring', 'Adopt' %}{% for technique in tech-adopt %}{{ technique.name }},{{ technique.ring }},Techniques,false,modal-{{ technique.filename }},
+{% endfor %}{% assign tech-can-use = site.techniques | where:'ring', 'Can Use' %}{% for technique in tech-can-use %}{{ technique.name }},{{ technique.ring }},Techniques,false,modal-{{ technique.filename }},
+{% endfor %}{% assign tech-assess = site.techniques | where:'ring', 'Assess' %}{% for technique in tech-assess %}{{ technique.name }},{{ technique.ring }},Techniques,false,modal-{{ technique.filename }},
+{% endfor %}{% assign tech-deprecated = site.techniques | where:'ring', 'Deprecated' %}{% for technique in tech-deprecated %}{{ technique.name }},[depr],Techniques,false,modal-{{ technique.filename }},
+{% endfor %}{% assign tool-adopt = site.tools | where:'ring', 'Adopt' %}{% for tool in tool-adopt %}{{ tool.name }},{{ tool.ring }},Tools,false,modal-{{ tool.filename }},
+{% endfor %}{% assign tool-can-use = site.tools | where:'ring', 'Can Use' %}{% for tool in tool-can-use %}{{ tool.name }},{{ tool.ring }},Tools,false,modal-{{ tool.filename }},
+{% endfor %}{% assign tool-assess = site.tools | where:'ring', 'Assess' %}{% for tool in tool-assess %}{{ tool.name }},{{ tool.ring }},Tools,false,modal-{{ tool.filename }},
+{% endfor %}{% assign tool-deprecated = site.tools | where:'ring', 'Deprecated' %}{% for tool in tool-deprecated %}{{ tool.name }},[depr],Tools,false,modal-{{ tool.filename }},
+{% endfor %}{% assign lang-adopt = site.languages-frameworks | where:'ring', 'Adopt' %}{% for language in lang-adopt %}{{ language.name }},{{ language.ring }},Languages & Frameworks,false,modal-{{ language.filename }},
+{% endfor %}{% assign lang-can-use = site.languages-frameworks | where:'ring', 'Can Use' %}{% for language in lang-can-use %}{{ language.name }},{{ language.ring }},Languages & Frameworks,false,modal-{{ language.filename }},
+{% endfor %}{% assign lang-assess = site.languages-frameworks | where:'ring', 'Assess' %}{% for language in lang-assess %}{{ language.name }},{{ language.ring }},Languages & Frameworks,false,modal-{{ language.filename }},
+{% endfor %}{% assign lang-deprecated = site.languages-frameworks | where:'ring', 'Deprecated' %}{% for language in lang-deprecated %}{{ language.name }},[depr],Languages & Frameworks,false,modal-{{ language.filename }},
+{% endfor %}{% assign platform-adopt = site.platforms | where:'ring', 'Adopt' %}{% for platform in platform-adopt %}{{ platform.name }},{{ platform.ring }},Platforms,false,modal-{{ platform.filename }},
+{% endfor %}{% assign platform-can-use = site.platforms | where:'ring', 'Can Use' %}{% for platform in platform-can-use %}{{ platform.name }},{{ platform.ring }},Platforms,false,modal-{{ platform.filename }},
+{% endfor %}{% assign platform-assess = site.platforms | where:'ring', 'Assess' %}{% for platform in platform-assess %}{{ platform.name }},{{ platform.ring }},Platforms,false,modal-{{ platform.filename }},
+{% endfor %}{% assign platform-deprecated = site.platforms | where:'ring', 'Deprecated' %}{% for platform in platform-deprecated %}{{ platform.name }},[depr],Platforms,false,modal-{{ platform.filename }},
+{% endfor %}

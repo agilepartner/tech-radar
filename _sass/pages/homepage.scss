@@ -1,0 +1,132 @@
+.page-homepage {
+
+  margin-top: 15rem;
+
+  @media(max-width: 767px) {
+    margin-top: 0;
+  }
+
+  .section-intro {
+    .grid-flex {
+      .has-background {
+        position: relative;
+        color: #ffffff;
+        margin: -15rem;
+        padding: 15rem;
+
+        h2 {color: #ffffff;}
+        &:after {
+          background-image: url('../images/wave-1.png');
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+          margin: -20rem;
+          padding: 20rem;
+          color: #ffffff;
+          @include position(absolute, 0,0,0,0);
+          content: "";
+          z-index: -1;
+          @include rotate(40deg);
+        }
+
+        a {color: #ffffff;}
+      }
+    }
+
+    @media(max-width: 767px) {
+      .grid-flex {
+        .column {
+          flex: 0 0 100%;
+          max-width: 100%;
+          margin-left: 0!important;
+          text-align: center;
+
+          .has-background {
+            margin: 0;
+            padding: 0;
+            color: $color-text;
+            h2 {color: $gray-darkest;}
+            a {color: $main-color;}
+            &:after {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section-go-to-radar {
+    margin-top: 20rem;
+    a {
+      display: block;
+      text-align: center;
+      padding: 2rem 3rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    @media(max-width: 767px) {
+      margin-top: 5rem;
+      .grid-flex {
+        .column {
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
+      }
+    }
+  }
+
+  .section-categories {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    a {
+      display: block;
+      text-align: center;
+      padding: 2rem 3rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    @media(max-width: 767px) {
+      margin-top: 5rem;
+      .grid-flex {
+        .column {
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
+      }
+    }
+  }
+
+  .section-print {
+    padding: 10rem 0;
+    position: relative;
+
+    &:before {
+      @include position(absolute, 0,0,0,0);
+      content: "";
+      background-image: url('../images/wave-2.png');
+      background-repeat: no-repeat;
+      background-size: 35%;
+      background-position: left bottom;
+      z-index: -1;
+    }
+
+    @media(max-width: 767px) {
+      margin-top: 5rem;
+      padding: 0;
+      &:before {
+        background-size: 100%;
+      }
+      .grid-flex {
+        .column {
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
+      }
+    }
+  }
+}
