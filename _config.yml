@@ -1,4 +1,5 @@
 name: Tech radar
+baseurl: "/"
 
 plugins:
   - github-pages
