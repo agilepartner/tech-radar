@@ -1,8 +1,8 @@
 ---
 layout: details
-filename: angular 
+filename: angular
 name: Angular
-image: /assets/images/languages-frameworks/angular.png
+image: /tech-radar/assets/images/languages-frameworks/angular.png 
 category: languages-frameworks
 ring: Can Use
 ---

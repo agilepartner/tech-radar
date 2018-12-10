@@ -1,9 +1,8 @@
 ---
 layout: details
-filename: vscode 
+filename: vscode
 name: Visual Studio Code
-image: /assets/images/TDD.png
+image: /tech-radar/assets/images/tools/visual-studio-code.png
 category: Tools
 ring: Adopt
 ---
-

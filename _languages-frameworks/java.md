@@ -1,8 +1,8 @@
 ---
 layout: details
-filename: java 
+filename: java
 name: Java
-image: /assets/images/languages-frameworks/java.png
+image: /tech-radar/assets/images/languages-frameworks/java.png
 category: languages-frameworks
 ring: Adopt
 ---

@@ -1,5 +1,5 @@
 .page-radar {
-  background-image: url('../images/wave-6.jpg');
+  //background-image: url('../images/wave-6.jpg');
   background-repeat: no-repeat;
   background-size: 50%;
   position: relative;
@@ -16,6 +16,14 @@
     background-position: right bottom;
   }
 
+  .home-link {
+    display: block;
+    max-width: 50%;
+    margin: auto;
+    text-align: center;
+    &:hover {text-decoration: underline;}
+  }
+
 
   ul {
     margin-bottom: 3rem;
@@ -26,7 +34,23 @@
 
       a:hover {text-decoration: underline;}
 
+      .blip-list-item {
+        color: $main-color;
+
+        &.highlight {
+          background-color: transparent!important;
+          text-decoration: underline;
+          color: $main-color!important;
+        }
+      }
+
       ul {margin-top: 1rem;margin-bottom: 0;}
+    }
+  }
+
+  .quadrant-table {
+    h3 {
+      color: $gray-darkest;
     }
   }
 

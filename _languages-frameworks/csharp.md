@@ -1,8 +1,8 @@
 ---
 layout: details
-filename: csharp 
+filename: csharp
 name: C#
-image: /assets/images/languages-frameworks/csharp.png
+image: /tech-radar/assets/images/languages-frameworks/csharp.png
 category: languages-frameworks
 ring: Deprecated
 ---
