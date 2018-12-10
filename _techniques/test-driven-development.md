@@ -2,7 +2,7 @@
 layout: details
 filename: tdd
 name: Test Driven Development
-image: /assets/images/TDD.png
+image: 
 category: Techniques
 ring: Adopt
 ---
