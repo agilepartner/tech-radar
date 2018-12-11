@@ -1,5 +1,20 @@
 # Tech radar
 
+You can access a preview of the radar [here](https://agilepartner.github.io/tech-radar/).
+
+## What ?
+The Radar is a document that sets out the changes that are currently interesting regarding software development.  
+It is published by a company called Thoughtworks.  
+You can find more information about it [here](https://www.thoughtworks.com/radar/faq).
+
+## Why ?
+We have developed this radar because we want to document the usage of technologies in our company in an easy way.
+People who wants to document something just need to push a new md file in the repository.
+
+![tech-radar](/assets/images/preview.png)
+
+![tech-radar](/assets/images/preview-rings.png)
+
 ## How to use it ?
 The tech radar is built based on the elements specified in the jekyll collections define in the _config.yml file.
 
