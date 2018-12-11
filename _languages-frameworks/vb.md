@@ -1,10 +1,10 @@
 ---
 layout: details
-filename: clojure
-name: Clojure
-image: /tech-radar/assets/images/languages-frameworks/clojure.png 
+filename: vb
+name: Visual Basic
+image: /tech-radar/assets/images/languages-frameworks/vb.jpg
 category: languages-frameworks
-ring: Assess
+ring: Deprecated
 ---
 
 # What is it ?
@@ -28,4 +28,6 @@ Sed ullamcorper nibh eget massa dapibus hendrerit. Nulla facilisi. Aliquam erat 
 - [turpis fermentum]()
 
 # Contacts
-- [Contactum]()
+- [Contactum 1]()
+- [Contactum 2]()
+- [Contactum 3]()
