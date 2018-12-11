@@ -1,10 +1,18 @@
-<div class="box-modal" data-modal="modal-{{ include.filename }}" role="document">
+<div
+  class="box-modal"
+  data-modal="modal-{{ include.filename }}"
+  role="document"
+>
   <div class="box-modal__header">
-    <h4><img src="{{include.image}}" width="40" /> <span>{{ include.name }}</span></h4>
-    <button type="button" class="triggerCloseModal"><i class="fa fa-times"></i></button>
+    <h4>
+      <img src="{{include.image}}" width="40" /> <span>{{ include.name }}</span>
+    </h4>
+    <button type="button" class="triggerCloseModal">
+      <i class="fa fa-times"></i>
+    </button>
   </div>
 
-  <div class="box-modal__content">
-    {{ include.content }}
-  </div>
+  <div class="box-modal__content">{{ include.content }}</div>
+
+  {% include share.html %}
 </div>
