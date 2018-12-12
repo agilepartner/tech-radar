@@ -183,7 +183,7 @@
 		}
 
 		.box-1-content {
-			
+
 		}
 
 		@for $i from 1 through 100 {
@@ -268,9 +268,21 @@
 }
 
 
+
+.quadrant-table {
+	.box-collapse {
+		width: 250px;
+	}
+}
+
+
 .box-collapse {
-	border: 1px solid $gray-lighter;
+	border: 1px solid #ffffff;
 	border-bottom: 0;
+
+
+
+
 	&:last-child {border-bottom: 1px solid $gray-lighter;}
 
 	& + .box-collapse {border-top: 1px solid $gray-lighter;}
@@ -301,21 +313,38 @@
 			position: relative;
 			display: block;
 			width: 100%;
-			text-align: left;
-			background-color: $gray-lightest;
-			color: $gray-darker;
+			text-align: center;
+			background-color: $main-color;
+			color: #ffffff;
 			font-weight: 600;
-			padding: 2rem 3rem;
+			padding: 1rem 3rem;
 			letter-spacing: 0.5px;
 			@include transition(0.2s);
 
-			&:hover, &:focus {background-color: $gray-lighter;@include transition(0.2s);}
+			&:hover, &:focus {background-color: $main-color-dark;@include transition(0.2s);}
 		}
 	}
 
 	.box-collapse-content {
-		padding: 3rem;
+		padding: 1rem;
 		display: none;
+		background-color: $main-color;
+
+		ul {
+			margin-bottom: 0;
+		}
+
+
+		.blip-list-item {
+			color: #ffffff;
+			font-weight: 300!important;
+			padding: 5px!important;
+			&.highlight {
+				background-color: #ffffff!important;
+				color: $main-color!important;
+				text-decoration: none!important;
+			}
+		}
 
 		&.is-expanded {
 			display: block;

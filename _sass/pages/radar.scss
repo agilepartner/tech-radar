@@ -6,6 +6,14 @@
   min-height: calc(100vh - 17rem);
   z-index: 1;
 
+  .home-link {
+    display: block;
+    max-width: 50%;
+    margin: auto;
+    text-align: center;
+    &:hover {text-decoration: underline;}
+  }
+
   &:before {
     @include position(absolute, 0,0,0,0);
     content: "";
@@ -15,15 +23,6 @@
     background-size: 20%;
     background-position: right bottom;
   }
-
-  .home-link {
-    display: block;
-    max-width: 50%;
-    margin: auto;
-    text-align: center;
-    &:hover {text-decoration: underline;}
-  }
-
 
   ul {
     margin-bottom: 3rem;
