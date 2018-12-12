@@ -13,19 +13,19 @@ layout: radar
       <div id="pageModalsOverlayer"></div>
 
       {% for item in site.techniques %}
-        {% include modal.html name=item.name content=item.content filename=item.filename image=item.image %}
+        {% include modal.html name=item.name content=item.content filename=item.filename image=item.image category=item.category %}
       {% endfor %}
 
       {% for item in site.languages-frameworks %}
-        {% include modal.html name=item.name content=item.content filename=item.filename image=item.image %}
+        {% include modal.html name=item.name content=item.content filename=item.filename image=item.image category=item.category %}
       {% endfor %}
 
       {% for item in site.tools %}
-        {% include modal.html name=item.name content=item.content filename=item.filename image=item.image %}
+        {% include modal.html name=item.name content=item.content filename=item.filename image=item.image category=item.category %}
       {% endfor %}
 
       {% for item in site.platforms %}
-        {% include modal.html name=item.name content=item.content filename=item.filename image=item.image %}
+        {% include modal.html name=item.name content=item.content filename=item.filename image=item.image category=item.category %}
       {% endfor %}
     </div>
 
