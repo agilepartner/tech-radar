@@ -1,0 +1,8 @@
+jekyll:
+    build: .
+    command: >
+      sh -c "JEKYLL_ENV=production bundle exec jekyll serve --host 0.0.0.0 --incremental"
+    ports:
+        - 4000:4000
+    volumes:
+        - .:/srv/src

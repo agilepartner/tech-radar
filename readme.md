@@ -73,3 +73,8 @@ bundle install
 ```
 bundle exec jekyll serve
 ```
+
+## Serve the radar with Docker
+```
+docker-compose up
+```

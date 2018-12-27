@@ -1,5 +1,6 @@
 name: Tech radar
 baseurl: "/tech-radar"
+url: "http://localhost:4000"
 
 plugins:
   - github-pages
