@@ -74,6 +74,12 @@ bundle install
 bundle exec jekyll serve
 ```
 
+## Configuration
+To configure the radar you need to set the url property of the _config.yml file :
+```
+url: "https://[your-user].github.io/"
+```
+
 ## Serve the radar with Docker
 ```
 docker-compose up
