@@ -13,7 +13,7 @@ collections:
   techniques:
     output: true
   tools:
-    output: true    
+    output: true
 
 sass:
     sass_dir: _sass
