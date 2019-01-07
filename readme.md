@@ -84,3 +84,8 @@ url: "https://[your-user].github.io/"
 ```
 docker-compose up
 ```
+
+## Docker build image
+```
+docker build -t tech-radar .
+```
