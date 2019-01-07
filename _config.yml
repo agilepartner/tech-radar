@@ -21,4 +21,4 @@ sass:
 plugins:
   - jekyll-target-blank
 
-exclude: ['node_modules']
+exclude: ['readme.md', 'docker-compose.yml', 'Dockerfile', 'Gemfile', 'Gemfile.lock', 'LICENSE.txt', 'tech-radar.gemspec']

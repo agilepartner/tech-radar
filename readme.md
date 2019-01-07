@@ -74,6 +74,12 @@ bundle install
 bundle exec jekyll serve
 ```
 
+## Build the radar with jekyll
+
+```
+bundle exec jekyll build
+```
+
 ## Configuration
 To configure the radar you need to set the url property of the _config.yml file :
 ```
