@@ -1,8 +1,13 @@
----
-layout: default
----
-
-<ul id="search-results"></ul>
+<div class="input">
+    <div class="input-search">
+        <form action="{{ site.baseurl }}/search.html" method="get">
+            <div class="input-search">
+                <input type="text" id="search-box" name="query">
+                <button type="submit" class="btn-square bg-main-color" data-modal="modal-search-results"><i class="fas fa-search"></i></button>
+            </div>         
+        </form>
+    </div>
+</div>
 
 <script>
   window.store = {
@@ -13,7 +18,6 @@ layout: default
                 "{{ page.url | slugify }}": {
                   "title": "{{ page.title | xml_escape }}",
                   "category": "{{ page.category | xml_escape }}",
-                  "ring": "{{ page.ring | xml_escape }}",
                   "content": {{ page.content | strip_html | strip_newlines | jsonify }},
                   "url": "{{ site.baseurl }}/{{ page.url | xml_escape }}"
                 } {% unless forloop.last %},{% endunless %}

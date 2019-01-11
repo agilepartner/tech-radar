@@ -2,18 +2,20 @@
   function displaySearchResults(results, store) {
     var searchResults = document.getElementById('search-results');
 
-    if (results.length) { // Are there any results?
-      var appendString = '';
-
-      for (var i = 0; i < results.length; i++) {  // Iterate over the results
-        var item = store[results[i].ref];
-        appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
-        appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
+    if(searchResults){
+      if (results.length) { // Are there any results?
+        var appendString = '';
+  
+        for (var i = 0; i < results.length; i++) {  // Iterate over the results
+          var item = store[results[i].ref];
+          appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '(' + item.ring + ')</h3></a>';
+          appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
+        }
+  
+        searchResults.innerHTML = appendString;
+      } else {
+        searchResults.innerHTML = '<li>No results found</li>';
       }
-
-      searchResults.innerHTML = appendString;
-    } else {
-      searchResults.innerHTML = '<li>No results found</li>';
     }
   }
 

@@ -5,10 +5,14 @@
 
         <div class="grid-flex v-align-middle grid-title">
             <div class="column">
-            <h1 class="m-0">{{page.title}}</h1>
+                <h1 class="m-0">{{page.title}}</h1>
             </div>
+            <div class="column">
+                {% include search.html %}
+            </div>
+
             <div class="column text-right">
-            <a href="{{ site.baseurl }}" class="btn bg-gradient-main-color fa-arrow-left left link-homepage">Back to homepage</a>
+                <a href="{{ site.baseurl }}" class="btn bg-gradient-main-color fa-arrow-left left link-homepage">Back to homepage</a>
             </div>
         </div>
     </div>

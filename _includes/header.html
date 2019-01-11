@@ -1,13 +1,21 @@
 
 <body>
   <header class="page-header">
-    <div class="page-wrapper">
-      <h1 class="logo"><a href="{{ site.baseurl }}/">TECH RADAR</a></h1>
-      <ul class="list-social">
-        <li><a href="https://www.facebook.com/agilepartner" class="link-facebook" target="_blank"><i class="fab fa-facebook" aria-label="hidden"></i></a></li>
-        <li><a href="https://twitter.com/agilepartner" class="link-twitter" target="_blank"><i class="fab fa-twitter" aria-label="hidden"></i></a></li>
-        <li><a href="https://www.linkedin.com/company/agile-partner-s-a-/" target="_blank" class="link-linkedin"><i class="fab fa-linkedin" aria-label="hidden"></i></a></li>
-        <li><a href="mailto:contact@agilepartner.net" class="link-mail" target="_blank"><i class="fa fa-envelope" aria-label="hidden"></i></a></li>
-      </ul>
+    <div class="page-wrapper grid-flex v-align-middle grid-title">
+            <div class="column">
+              <h1 class="logo"><a href="{{ site.baseurl }}/">TECH RADAR</a></h1>
+            </div>
+            <div class="column">
+                {% include search.html %}
+            </div>
+
+            <div class="column text-right">
+              <ul class="list-social">
+                <li><a href="https://www.facebook.com/agilepartner" class="link-facebook" target="_blank"><i class="fab fa-facebook" aria-label="hidden"></i></a></li>
+                <li><a href="https://twitter.com/agilepartner" class="link-twitter" target="_blank"><i class="fab fa-twitter" aria-label="hidden"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/agile-partner-s-a-/" target="_blank" class="link-linkedin"><i class="fab fa-linkedin" aria-label="hidden"></i></a></li>
+                <li><a href="mailto:contact@agilepartner.net" class="link-mail" target="_blank"><i class="fa fa-envelope" aria-label="hidden"></i></a></li>
+              </ul>
+            </div>
     </div>
   </header>

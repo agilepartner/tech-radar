@@ -439,6 +439,10 @@
   }
 }
 
+.btn-square {
+  @extend .btn;
+  border-radius: 0px;
+}
 
 
 .btn-group {
