@@ -1,10 +1,10 @@
 ---
 layout: details
-filename: clojure
-name: Clojure
-image: /tech-radar/assets/images/languages-frameworks/clojure.png 
+filename: java-8
+name: Java 8
+image: /tech-radar/assets/images/languages-frameworks/java.png
 category: languages-frameworks
-ring: Assess
+ring: Adopt
 ---
 
 # What is it ?
