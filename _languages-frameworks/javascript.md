@@ -2,7 +2,7 @@
 layout: details
 filename: javascript
 name: Javascript
-image: /tech-radar/assets/images/languages-frameworks/react.png
+image: /tech-radar/assets/images/languages-frameworks/javascript.png
 category: languages-frameworks
 ring: Adopt
 ---

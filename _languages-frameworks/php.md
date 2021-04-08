@@ -2,7 +2,7 @@
 layout: details
 filename: php
 name: PHP
-image: /tech-radar/assets/images/languages-frameworks/clojure.png 
+image: /tech-radar/assets/images/languages-frameworks/php.png 
 category: languages-frameworks
 ring: Adopt
 ---

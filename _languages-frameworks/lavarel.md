@@ -2,7 +2,7 @@
 layout: details
 filename: lavarel
 name: Lavarel
-image: /tech-radar/assets/images/languages-frameworks/clojure.png 
+image: /tech-radar/assets/images/languages-frameworks/lavarel.png 
 category: languages-frameworks
 ring: Adopt
 ---

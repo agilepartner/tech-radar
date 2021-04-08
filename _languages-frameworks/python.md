@@ -2,7 +2,7 @@
 layout: details
 filename: python
 name: Python
-image: /tech-radar/assets/images/languages-frameworks/clojure.png 
+image: /tech-radar/assets/images/languages-frameworks/python.png 
 category: languages-frameworks
 ring: Adopt
 ---

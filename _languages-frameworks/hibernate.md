@@ -2,7 +2,7 @@
 layout: details
 filename: hibernate
 name: Hibernate
-image: /tech-radar/assets/images/languages-frameworks/clojure.png 
+image: /tech-radar/assets/images/languages-frameworks/hibernate.png 
 category: languages-frameworks
 ring: Adopt
 ---

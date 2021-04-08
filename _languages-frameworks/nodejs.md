@@ -2,7 +2,7 @@
 layout: details
 filename: nodejs
 name: Node.js
-image: /tech-radar/assets/images/languages-frameworks/clojure.png 
+image: /tech-radar/assets/images/languages-frameworks/nodejs.png
 category: languages-frameworks
 ring: Adopt
 ---

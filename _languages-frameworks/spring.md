@@ -2,7 +2,7 @@
 layout: details
 filename: spring
 name: Spring
-image: /tech-radar/assets/images/languages-frameworks/clojure.png 
+image: /tech-radar/assets/images/languages-frameworks/spring.png 
 category: languages-frameworks
 ring: Adopt
 ---
