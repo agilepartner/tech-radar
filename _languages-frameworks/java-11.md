@@ -1,7 +1,7 @@
 ---
 layout: details
-filename: java-8
-name: Java 8
+filename: java-11
+name: Java 11
 image: /tech-radar/assets/images/languages-frameworks/java.png
 category: languages-frameworks
 ring: Adopt
