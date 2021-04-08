@@ -2,7 +2,7 @@
 layout: details
 filename: go
 name: Go
-image: /tech-radar/assets/images/languages-frameworks/clojure.png 
+image: /tech-radar/assets/images/languages-frameworks/go.png 
 category: languages-frameworks
 ring: Adopt
 ---
