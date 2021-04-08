@@ -1,6 +1,6 @@
 name: Tech radar
 baseurl: "/tech-radar"
-url: "https://agilepartner.github.io/"
+url: "https://otaviojava.github.io/"
 
 plugins:
   - github-pages
